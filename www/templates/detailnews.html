@@ -1,0 +1,20 @@
+<ion-view>
+    <ion-nav-bar class="bar-clear">
+        <ion-nav-buttons side="primary">
+            <button class="button button-clear button-light" ng-click="doAbout()">
+                back
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+<ion-nav-title><img src="http://ppdb.smkmediainformatika.sch.id//assets/img/logo_dashboard.png" style="display: block;
+    margin: 0 auto; max-width: 130%; height: 100%;"></ion-nav-title>
+<ion-content>
+    <div class='padding'>
+        <h3>
+            {{posts.title.rendered}}
+        </h3>
+    </div>
+        <small class="padding">{{posts.date | date : "dd mm y"}}</small>
+        <div class='padding content' ng-bind-html="posts.content.rendered"></div>
+</ion-content>
+</ion-view>

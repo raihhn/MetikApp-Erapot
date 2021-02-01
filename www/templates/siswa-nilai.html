@@ -1,0 +1,28 @@
+
+<ion-view view-title="Nilai">
+    <ion-content >
+      <div class="row"></div>
+       <p>&nbsp;Nilai dari siswa/i <b>{{isi.nama}} ( {{isi.nis}} )</b></p> 
+      </div>
+      <div class="row">
+        <br>
+        <div class="col col-85">
+        <div class="card center">
+          <div class="item item-divider">
+              Nilai Mata Pelajaran
+          </div>
+          <div class="item item-text-wrap">
+            <table ng-controller="SiswaCtrl">
+              <tr ng-repeat="x in showGrade">
+                <td>{{x.namamapel}}</td>
+                <td>&nbsp;:&nbsp;</td>
+                <td>{{x.grade}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      </div>
+    </ion-content>
+  </ion-view>
+  

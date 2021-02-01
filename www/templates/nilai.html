@@ -1,0 +1,16 @@
+    <ion-view view-title="List Siswa" hide-nav-bar="true">
+        <ion-header-bar class="bar bar-header bar-positive ">
+            <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title"> List Siswa</h1>
+        <a href="#/app/nilai-create" class="button icon ion-person-add" nav-direction="forward" style="background-color: #17297a; color: white;"></a>
+        </ion-header-bar>
+
+        <ion-content>
+            <ion-list ng-controller="NilaiCtrl">
+                <ion-item class="item item-icon-left" ng-repeat="x in showSiswaNilai" href="#/app/nilai/{{x.nis}}"  ng-click="doClick()">
+                    <i class="icon ion-person"></i>
+                    {{x.nama}}
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-view>

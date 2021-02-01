@@ -1,0 +1,21 @@
+    <ion-view view-title="Mata Pelajaran" hide-nav-bar="true">
+        <ion-header-bar  class="bar bar-header bar-positive " >
+            <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title"> MataPelajaran</h1>
+        <a href="#/app/mapel-create"class="button icon ion-document-text" nav-direction="forward" style="background-color: #17297a; color: white;"></a>
+        </ion-header-bar>
+
+        <ion-content>
+            <ion-list ng-controller="MapelCtrl">
+                <ion-item class="item item-icon-left item-icon-right" ng-repeat="x in showMapel" href="#/app/mapel-update/{{x.kdmapel}}">
+                    <i class="icon ion-ios-book"></i>
+                    {{x.kdmapel}}
+                    <p>{{x.namamapel}}</p>
+                    <a class="button button-icon icon ion-ios-trash" ng-click="delMapel('{{x.kdmapel}}')"></a></a>
+                    
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-view>
+
+

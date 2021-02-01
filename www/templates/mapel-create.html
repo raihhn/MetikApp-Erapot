@@ -1,0 +1,25 @@
+<ion-view cache-view="false" view-title="Tambah Mapel" hide-nav-bar="true">
+    <ion-header-bar>
+        <a href="#/app/mapel" class="button icon ion-ios-arrow-back" style="background-color: #17297a; color: white;"> Mata Pelajaran </a>
+        <h1 class="title">Tambah Mapel</h1>
+    </ion-header-bar>
+
+<ion-view title="Tambah Mapel" >
+    <ion-content>
+        <form ng-submit="createMapel()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Kode MataPelajaran</span>
+                    <input type="text" value="" ng-model="mapelData.mapel_kd_create">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nama MataPelajaran</span>
+                    <input type="text" value="" ng-model="mapelData.mapel_nama_create">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive">Tambah</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

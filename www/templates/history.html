@@ -1,0 +1,22 @@
+<style>
+    :root {
+      --ion-safe-area-top: 20px;
+      --ion-safe-area-bottom: 22px;
+    }
+  </style>
+<ion-nav-view>
+    <ion-header-bar class="bar-assertive">
+        <img src="http://ppdb.smkmediainformatika.sch.id//assets/img/logo_dashboard.png" style="display: block;
+    margin: 0 auto; max-width: 130%; height: 100%;">
+        <a href="#front" class="button button-clear button-light"  nav-direction='back'>back</a>
+    </ion-header-bar>
+    <ion-content class="has-header">
+       <div class='padding'>
+        <h3>
+            {{posts.title.rendered}}
+        </h3>
+    </div>
+        <small class="padding">{{posts.date | date : "dd mm y"}}</small>
+        <div class='padding content' ng-bind-html="posts.content.rendered"></div>
+    </ion-content>
+</ion-nav-view>

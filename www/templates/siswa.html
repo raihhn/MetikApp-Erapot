@@ -1,0 +1,17 @@
+    <ion-view view-title="Siswa" hide-nav-bar="true">
+        <ion-header-bar class="bar bar-header bar-positive ">
+            <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title"> Siswa</h1>
+        <a href="#/app/siswa-create" class="button icon ion-person-add" nav-direction="forward" style="background-color: #17297a;"></a>
+        </ion-header-bar>
+
+        <ion-content>
+            <ion-list ng-controller="SiswaCtrl">
+                <ion-item class="item item-icon-left item-icon-right" ng-repeat="x in showSiswa" href="#/app/siswa-update/{{x.nis}}">
+                    <i class="icon ion-person"></i>
+                    {{x.nama}}
+                    <a class="button button-icon icon ion-ios-trash" ng-click="delSiswa({{x.nis}})"></a>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-view>

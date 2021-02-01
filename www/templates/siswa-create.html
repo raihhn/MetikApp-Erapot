@@ -1,0 +1,39 @@
+
+<ion-view cache-view="false" view-title="Tambah Siswa" hide-nav-bar="true">
+    <ion-header-bar>
+        <a href="#/app/siswa" class="button icon ion-ios-arrow-back" style="background-color: #17297a; color:  white;border:none;"> Siswa </a>
+        <h1 class="title">Tambah Siswa</h1>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="createSiswa()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">NIS</span>
+                    <input type="text" value="" ng-model="siswaData.siswa_nis_create">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nama</span>
+                    <input type="text" value="" ng-model="siswaData.siswa_nama_create">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Alamat</span>
+                    <input type="text"  value="" ng-model="siswaData.siswa_alamat_create" >
+                </label>
+                <!-- <label class="item item-input">
+                    <span class="input-label">Jenis Kelamin</span>
+                    <input type="text" value="" ng-model="siswaData.siswa_jenkel_create">
+                </label> -->
+                <label class="item">
+                    <span class="input-label">Jenis Kelamin</span>
+                    <ion-radio-group>
+                      <ion-radio ng-model='siswaData.siswa_jenkel_create' value="L">Laki-laki</ion-radio>
+                      <ion-radio ng-model='siswaData.siswa_jenkel_create' value="P">Perempuan</ion-radio>
+                    </ion-radio-group>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" >Tambah</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
